@@ -146,7 +146,7 @@ class NumberToLocalizedStringTransformer implements DataTransformerInterface
             return;
         }
 
-        if ('NaN' === $value) {
+        if ('nan' === strtolower($value)) {
             throw new TransformationFailedException('"NaN" is not a valid number');
         }
 
